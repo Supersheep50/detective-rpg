@@ -10,8 +10,8 @@ function MenuScreen() {
   const navigate = useNavigate();
 
   return (
-    <div className="d-flex flex-column align-items-center">
-      <pre className="text-monospace bg-dark text-light p-4 rounded mb-5">
+<div className="container d-flex flex-column align-items-center px-3">
+<pre className="text-monospace bg-dark text-light p-4 rounded mb-5">
 {String.raw`
   _____       _            _   _                  _               _____                      _       
  |  __ \     | |          | | (_)                | |             / ____|                    | |      
@@ -22,7 +22,8 @@ function MenuScreen() {
 `}
       </pre>
 
-      <div className="border border-light rounded p-4 bg-secondary text-light" style={{ minWidth: '250px' }}>
+      <div className="border border-light rounded p-4 bg-secondary text-light" style={{ width: '100%', maxWidth: '400px' }}
+      >
         <h4 className="text-center mb-4">Main Menu</h4>
         <div className="d-grid gap-3">
           <button className="btn btn-outline-light" onClick={() => navigate('/intro')}>New Game</button>
@@ -32,11 +33,15 @@ function MenuScreen() {
         </div>
       </div>
     </div>
+
+    
   );
 }
 
 function App() {
   return (
+
+    
     <Router>
       <div className="bg-dark min-vh-100 d-flex justify-content-center align-items-center">
         <Routes>
